@@ -28,8 +28,8 @@ export class Db {
 
     private constructor() {
         this._pool = new Pool({
-            host: '192.168.0.228',
-            port: 5432,
+            host:  process.env.pgHost,
+            port: parseInt(process.env.pgPort),
             user: process.env.pgUser,
             password: process.env.pgPassword,
             database: process.env.pgDatabase
